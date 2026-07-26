@@ -2,16 +2,19 @@
 
 declare(strict_types=1);
 
-namespace PHPStreamServer\Symfony\Http;
+namespace PHPStreamServer\Symfony\Internal\Http;
 
 use Amp\ByteStream\StreamException;
 use Amp\Http\Server\Request as AmpRequest;
-use PHPStreamServer\Symfony\Http\Multipart\InvalidMultipartContentException;
-use PHPStreamServer\Symfony\Http\Multipart\InvalidMultipartHeaderException;
-use PHPStreamServer\Symfony\Http\Multipart\Multipart;
-use PHPStreamServer\Symfony\Http\Multipart\MultipartParser;
+use PHPStreamServer\Symfony\Internal\Http\Multipart\InvalidMultipartContentException;
+use PHPStreamServer\Symfony\Internal\Http\Multipart\InvalidMultipartHeaderException;
+use PHPStreamServer\Symfony\Internal\Http\Multipart\Multipart;
+use PHPStreamServer\Symfony\Internal\Http\Multipart\MultipartParser;
 use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
 
+/**
+ * @internal
+ */
 final class HttpFoundationFactory
 {
     private \SplObjectStorage $multipartResources;

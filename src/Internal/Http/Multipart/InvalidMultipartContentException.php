@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PHPStreamServer\Symfony\Http\Multipart;
+namespace PHPStreamServer\Symfony\Internal\Http\Multipart;
 
 /**
  * @internal

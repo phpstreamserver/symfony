@@ -2,13 +2,14 @@
 
 declare(strict_types=1);
 
-namespace PHPStreamServer\Symfony\Http;
+namespace PHPStreamServer\Symfony\Internal\Http;
 
 use Amp\Pipeline\Queue;
 use Revolt\EventLoop;
 use Revolt\EventLoop\FiberLocal;
 
 /**
+ * @internal
  * @implements \IteratorAggregate<string>
  */
 final class OutputStreamIterator implements \IteratorAggregate

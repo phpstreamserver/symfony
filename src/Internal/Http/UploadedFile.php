@@ -2,14 +2,17 @@
 
 declare(strict_types=1);
 
-namespace PHPStreamServer\Symfony\Http;
+namespace PHPStreamServer\Symfony\Internal\Http;
 
 use Amp\ByteStream\ClosedException;
 use Amp\ByteStream\WritableResourceStream;
-use PHPStreamServer\Symfony\Http\Multipart\Multipart;
+use PHPStreamServer\Symfony\Internal\Http\Multipart\Multipart;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile as BaseUploadedFile;
 
+/**
+ * @internal
+ */
 final class UploadedFile extends BaseUploadedFile
 {
     private int $error;

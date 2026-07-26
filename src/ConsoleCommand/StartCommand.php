@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace PHPStreamServer\Symfony\Command;
+namespace PHPStreamServer\Symfony\ConsoleCommand;
 
-use PHPStreamServer\Core\Command\StartCommand as BaseStartCommand;
+use PHPStreamServer\Core\ConsoleCommand\StartCommand as BaseStartCommand;
 
 final class StartCommand extends BaseStartCommand
 {

@@ -2,13 +2,16 @@
 
 declare(strict_types=1);
 
-namespace PHPStreamServer\Symfony\Http;
+namespace PHPStreamServer\Symfony\Internal\Http;
 
 use Amp\Http\Server\Request;
 use Amp\Http\Server\Response;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\HttpKernel\TerminableInterface;
 
+/**
+ * @internal
+ */
 final readonly class HttpRequestHandler
 {
     private HttpFoundationFactory $httpFoundationFactory;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PHPStreamServer\Symfony\Http;
+namespace PHPStreamServer\Symfony\Internal\Http;
 
 use Amp\ByteStream\ReadableIterableStream;
 use Amp\ByteStream\ReadableResourceStream;
@@ -11,6 +11,9 @@ use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 
+/**
+ * @internal
+ */
 final class AmpHttpFactory
 {
     public function createResponse(SymfonyResponse $symfonyResponse): AmpResponse

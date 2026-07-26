@@ -2,17 +2,20 @@
 
 declare(strict_types=1);
 
-namespace PHPStreamServer\Symfony\Logger;
+namespace PHPStreamServer\Symfony\Internal\Logger;
 
 use Monolog\Handler\AbstractHandler;
 use Monolog\LogRecord;
 use PHPStreamServer\Core\Exception\ServerIsNotRunning;
-use PHPStreamServer\Core\Message\CompositeMessage;
+use PHPStreamServer\Core\MessageBus\CompositeMessage;
 use PHPStreamServer\Core\MessageBus\MessageBusInterface;
-use PHPStreamServer\Plugin\Logger\Internal\FlattenNormalizer\ContextFlattenNormalizer;
-use PHPStreamServer\Plugin\Logger\Internal\LogEntry;
+use PHPStreamServer\Plugin\Logger\ContextFlattenNormalizer;
+use PHPStreamServer\Plugin\Logger\LogEntry;
 use PHPStreamServer\Plugin\Logger\LogLevel;
 
+/**
+ * @internal
+ */
 final class PhpSSMonologHandler extends AbstractHandler
 {
     public function __construct(private MessageBusInterface $bus)
